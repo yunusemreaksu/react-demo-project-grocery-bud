@@ -14,7 +14,7 @@ function App() {
     if(!name) {
       showAlert(true, "danger", "please enter value")
     } else if(name && isEditing) {
-      setList(list.map(() => {
+      setList(list.map((item) => {
         if(item.id ===editID) {
           return {...item, title: name}
         }
